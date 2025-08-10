@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
-
+@import "lenis/dist/lenis.css";
 @theme {
   --font-monoton: "Monoton", cursive;
 }
