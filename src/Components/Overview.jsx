@@ -1,11 +1,7 @@
 import React from "react";
 import { useLottie } from "lottie-react";
 
-import profile from "../assets/icons/wired-outline-680-it-developer-hover-pinch.json";
-import location from "../assets/icons/wired-outline-18-location-pin-hover-jump.json";
-import computer from "../assets/icons/wired-outline-478-computer-display-hover-angle.json";
-import globe from "../assets/icons/wired-outline-27-globe-hover-rotate.json";
-import email from "../assets/icons/wired-outline-177-envelope-send-hover-flying.json";
+import { profile, location, computer, globe, email } from "../index";
 
 const Icon = ({ animationData, playing }) => {
   const { View, play, stop } = useLottie({
