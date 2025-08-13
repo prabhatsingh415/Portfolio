@@ -16,7 +16,7 @@ import location from "./assets/icons/wired-outline-18-location-pin-hover-jump.js
 import computer from "./assets/icons/wired-outline-478-computer-display-hover-angle.json";
 import globe from "./assets/icons/wired-outline-27-globe-hover-rotate.json";
 import email from "./assets/icons/wired-outline-177-envelope-send-hover-flying.json";
-
+import project1 from "./assets/images/project1.png";
 export {
   htmlLogo,
   javaLogo,
@@ -36,4 +36,5 @@ export {
   computer,
   globe,
   email,
+  project1,
 };

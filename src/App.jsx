@@ -10,6 +10,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { useEffect, useRef } from "react";
 import SkillsSection from "./Components/SkillsSection";
+import About from "./Components/About";
+import ProjectSection from "./Components/ProjectSection";
 // Register GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
 
@@ -88,7 +90,9 @@ function App() {
         <Banner />
         <HeroSection />
         <Overview />
+        <About />
         <SkillsSection />
+        <ProjectSection />
       </div>
     </div>
   );

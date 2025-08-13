@@ -1,6 +1,7 @@
 import React from "react";
 import { useLottie } from "lottie-react";
-
+import { useRef } from "react";
+import { useAnimation } from "../hooks/useAnimation";
 import { profile, location, computer, globe, email } from "../index";
 
 const Icon = ({ animationData, playing }) => {
@@ -18,6 +19,8 @@ const Icon = ({ animationData, playing }) => {
 };
 
 export default function Overview() {
+  const sectionRef = useRef(null);
+  useAnimation(sectionRef);
   const [hoverIndex, setHoverIndex] = React.useState(null);
 
   const items = [
@@ -29,7 +32,10 @@ export default function Overview() {
   ];
 
   return (
-    <div className="h-80 w-full bg-black border-2 border-zinc-900 rounded-xl p-8 space-y-4 text-white">
+    <div
+      ref={sectionRef}
+      className="h-80 w-full bg-black border-2 border-zinc-900 rounded-xl p-8 space-y-4 text-white"
+    >
       {items.map(({ icon, text }, i) => (
         <div
           key={i}

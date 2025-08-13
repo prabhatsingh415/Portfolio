@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import gsap from "gsap";
 import {
   htmlLogo,
   javaLogo,
@@ -15,7 +14,7 @@ import {
   dockerLogo,
   postmanLogo,
 } from "../index";
-import { useGSAP } from "@gsap/react";
+import { useAnimation } from "../hooks/useAnimation";
 
 const skillsData = [
   {
@@ -78,22 +77,8 @@ const skillsData = [
 ];
 
 function SkillsSection() {
-  const sectionRef = useRef();
-
-  useGSAP(() => {
-    gsap.from(sectionRef.current, {
-      y: 50,
-      opacity: 0, // Moved opacity to tween properties
-      duration: 0.5,
-
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top 90%",
-        toggleActions: "play none none reverse", // Removed scrub to use toggleActions
-        markers: true,
-      },
-    });
-  });
+  const sectionRef = useRef(null);
+  useAnimation(sectionRef);
 
   return (
     <div ref={sectionRef} className="flex flex-col gap-4">
@@ -105,7 +90,7 @@ function SkillsSection() {
         {skillsData.map((skill, index) => (
           <div
             key={index}
-            className="group h-auto flex flex-col p-2 justify-center items-center  transition-all duration-300 ease-out
+            className="group h-auto flex flex-col p-2 justify-center items-center transition-all duration-300 ease-out
             hover:-translate-y-2 hover:shadow-2xl hover:z-10 bg-zinc-900 border-2 border-gray-950 rounded-xl cursor-pointer"
           >
             <div
