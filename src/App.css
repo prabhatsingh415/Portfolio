@@ -15,3 +15,38 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
+
+/* ——— Global Selection ——— */
+/* Apply this to 'html' or 'body' depending on your layout */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #444 transparent; /* thumb color | track color */
+}
+
+/* ——— WebKit Browsers ——— */
+::-webkit-scrollbar {
+  width: 6px; /* thin, elegant scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* keeps it subtle and clean */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(
+    68,
+    68,
+    68,
+    0.7
+  ); /* semi-opaque gray matches the dark UI */
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(
+    102,
+    102,
+    102,
+    0.9
+  ); /* slightly brighter on hover for visibility */
+}
