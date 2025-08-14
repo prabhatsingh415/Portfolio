@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useLottie } from "lottie-react";
 import { useAnimation } from "../hooks/useAnimation";
 import { profile, location, computer, globe, email } from "../index";

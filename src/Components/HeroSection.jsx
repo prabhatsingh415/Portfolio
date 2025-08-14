@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import pic from "../assets/images/image.png";
+import pic from "../assets/images/profile.png";
 import { useAnimation } from "../hooks/useAnimation";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -45,7 +45,7 @@ function HeroSection() {
       <img
         src={pic}
         alt="Prabhat Singh"
-        className="w-24 md:w-28 lg:w-36 aspect-square rounded-full object-cover border-2 border-white"
+        className="w-24 md:w-28 lg:w-36 aspect-square rounded-full object-cover object-top border-2 border-white"
       />
 
       <div ref={textRef} className="flex flex-col items-start text-left">

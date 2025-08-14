@@ -20,6 +20,8 @@ import linkedin from "./assets/icons/linkedin-icon.png";
 import fiverr from "./assets/icons/fiverr-icon.png";
 import githubWhite from "./assets/icons/github-white-icon.png";
 import project1 from "./assets/images/project1.png";
+import project2 from "./assets/images/project2.png";
+import project3 from "./assets/images/project3.png";
 export {
   htmlLogo,
   javaLogo,
@@ -43,4 +45,6 @@ export {
   fiverr,
   githubWhite,
   project1,
+  project2,
+  project3,
 };

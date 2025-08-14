@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { project1 } from "../index";
+import { project1, project2, project3 } from "../index";
 import { useAnimation } from "../hooks/useAnimation";
 
 const projectData = [
@@ -22,16 +22,16 @@ const projectData = [
     liveDemo: "https://irctc-rose.vercel.app/",
   },
   {
-    image: project1,
+    image: project2,
     title: "Portfolio Website",
     description:
       "A modern, responsive personal portfolio showcasing my projects, skills, and contact details, built with animations and smooth scrolling effects.",
     techStack: ["React", "Tailwind CSS", "GSAP", "JavaScript"],
-    github: "https://github.com/yourusername/portfolio",
-    liveDemo: "https://yourdeploymentlink.com/portfolio",
+    github: "https://github.com/prabhatsingh415/Portfolio.git",
+    liveDemo: "https://prabhatsingh-two.vercel.app/",
   },
   {
-    image: project1,
+    image: project3,
     title: "Email Validator",
     description:
       "A simple web application that validates email addresses in real-time using regular expressions and provides instant feedback to users.",
