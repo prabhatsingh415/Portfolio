@@ -6,11 +6,15 @@ function About() {
   const sectionRef = useRef(null);
   useAnimation(sectionRef);
   return (
-    <div ref={sectionRef} className="h-auto w-full flex flex-col gap-4">
-      <div className="h-auto w-full text-3xl border-2 border-zinc-900 p-2 rounded-xl">
+    <div
+      ref={sectionRef}
+      id="aboutSection"
+      className="scroll-mt-28 h-auto w-full flex flex-col gap-4"
+    >
+      <div className="h-auto w-full font-googleSans text-3xl border-2 border-zinc-900 p-2 rounded-xl">
         About
       </div>
-      <div className="h-auto p-4 w-full border-2 border-zinc-900 rounded-xl flex flex-wrap flex-col gap-4">
+      <div className="h-auto p-4 w-full font-sansations border-2 border-zinc-900 rounded-xl flex flex-wrap flex-col gap-4">
         <p>
           I’m a{" "}
           <a

@@ -6,16 +6,30 @@ function Header() {
   return (
     <header
       ref={sectionRef}
-      className="w-full h-8 flex justify-around gap-8 border-2 bg-black border-zinc-900 rounded-xl"
+      className="sticky top-0 w-full h-auto p-2 font-googleSans flex justify-around gap-8 border-2 bg-black border-zinc-900 rounded-xl z-50"
     >
-      <a href="/" className="hover:border-b-2 border-[#00fff7]">
-        home
+      <a
+        href="/resume.pdf" // Make sure this file is in the public folder
+        download="Prabhat_Singh_Resume.pdf"
+        className="transition-all duration-300 ease-out
+    hover:-translate-y-2 hover:shadow-xl hover:z-10 hover:shadow-zinc-700"
+      >
+        RESUME
       </a>
-      <a href="/" className="hover:border-b-2 border-[#00fff7]">
-        projects
+
+      <a
+        href="#projectSection"
+        className="transition-all duration-300 ease-out
+            hover:-translate-y-2 hover:shadow-xl hover:z-10 hover:shadow-zinc-700"
+      >
+        PROJECTS
       </a>
-      <a href="/" className="hover:border-b-2 border-[#00fff7]">
-        about``
+      <a
+        href="#aboutSection"
+        className="transition-all duration-300 ease-out
+            hover:-translate-y-2 hover:shadow-xl hover:z-10 hover:shadow-zinc-700"
+      >
+        ABOUT
       </a>
     </header>
   );

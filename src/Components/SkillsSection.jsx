@@ -10,9 +10,9 @@ import {
   reduxLogo,
   mySqlLogo,
   gitLogo,
-  githubLogo,
   dockerLogo,
   postmanLogo,
+  githubWhite,
 } from "../index";
 import { useAnimation } from "../hooks/useAnimation";
 
@@ -61,7 +61,7 @@ const skillsData = [
   },
   {
     name: "GitHub",
-    logo: githubLogo,
+    logo: githubWhite,
     desc: "Code hosting platform for collaboration.",
   },
   {
@@ -82,7 +82,7 @@ function SkillsSection() {
 
   return (
     <div ref={sectionRef} className="flex flex-col gap-4">
-      <div className="h-auto w-full p-2 text-3xl border-2 border-zinc-900 rounded-xl text-white">
+      <div className="h-auto w-full p-2 font-googleSans text-3xl border-2 border-zinc-900 rounded-xl text-white">
         SKILLS & TOOLS
       </div>
 
@@ -97,7 +97,7 @@ function SkillsSection() {
               className="h-15 w-15 bg-center mb-2 bg-contain bg-no-repeat"
               style={{ backgroundImage: `url(${skill.logo})` }}
             />
-            <div className="flex flex-col gap-2 text-center">
+            <div className="font-sansations flex flex-col gap-2 text-center">
               <p>{skill.name}</p>
               <p
                 className="

@@ -4,6 +4,8 @@
 @import "lenis/dist/lenis.css";
 @theme {
   --font-monoton: "Monoton", cursive;
+  --font-sansations: "Sansation", sans-serif;
+  --font-googleSans: "Google Sans Code", monospace;
 }
 
 body {

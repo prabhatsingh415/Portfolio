@@ -18,8 +18,8 @@ const projectData = [
       "JavaScript",
       "Tailwind CSS",
     ],
-    github: "https://github.com/yourusername/irctc-ticket-booking-app",
-    liveDemo: "https://yourdeploymentlink.com/irctc",
+    github: "https://github.com/prabhatsingh415/-irctc-app-backend.git",
+    liveDemo: "https://irctc-rose.vercel.app/",
   },
   {
     image: project1,
@@ -36,8 +36,8 @@ const projectData = [
     description:
       "A simple web application that validates email addresses in real-time using regular expressions and provides instant feedback to users.",
     techStack: ["HTML", "CSS", "JavaScript", "Regex"],
-    github: "https://github.com/yourusername/email-validator",
-    liveDemo: "https://yourdeploymentlink.com/email-validator",
+    github: "https://github.com/prabhatsingh415/Email_Validator.git",
+    liveDemo: "https://emailvalidator-gilt.vercel.app/",
   },
 ];
 
@@ -53,19 +53,12 @@ function ProjectSection() {
   return (
     <div
       ref={sectionRef}
-      className="relative w-full flex flex-col gap-4 p-2 sm:p-4"
+      id="projectSection"
+      className="scroll-mt-28 flex flex-col gap-4"
     >
-      <div className="w-full border-2 border-zinc-900 rounded-xl text-2xl sm:text-3xl p-2 ">
+      <div className="w-full h-auto font-googleSans border-2 border-zinc-900 rounded-xl text-2xl sm:text-3xl p-2 ">
         PROJECTS
       </div>
-
-      {/* Blur background when a project is open */}
-      {openIndex !== null && (
-        <div
-          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-10"
-          onClick={() => setOpenIndex(null)}
-        />
-      )}
 
       <div className="flex flex-col justify-center items-center gap-4 sm:gap-6 p-4 sm:p-8 h-auto w-full border border-zinc-800 rounded-xl relative z-20">
         {projectData.map((project, index) => {
@@ -78,10 +71,9 @@ function ProjectSection() {
                   ? "w-[90vw] sm:w-[80vw] m-4 sm:m-8 h-auto sm:h-[80vh]"
                   : "w-full md:w-3/4"
               } 
-  border border-gray-800 rounded-2xl p-2 flex flex-col items-center gap-4 cursor-pointer relative z-30 
-  bg-neutral-950 transition-all duration-300 ease-in-out overflow-hidden 
-            hover:-translate-y-2 hover:shadow-2xl hover:z-10`}
-              onClick={() => handleClick(index)}
+              border border-gray-800 rounded-2xl p-2 flex flex-col items-center gap-4 cursor-pointer relative z-30 
+            bg-neutral-950 transition-all duration-300 ease-in-out overflow-hidden 
+              hover:-translate-y-2 hover:shadow-2xl hover:z-10`}
             >
               <div
                 className="h-[30vh] sm:h-[40vh] w-full border-zinc-800 rounded-xl bg-center bg-contain bg-no-repeat"
@@ -90,9 +82,9 @@ function ProjectSection() {
               <div
                 className={`${
                   isOpen ? "h-auto" : "h-[5vh]"
-                } mt-2 flex flex-col items-center gap-4 sm:gap-8`}
+                } mt-2 font-sansations flex flex-col items-center gap-4 sm:gap-8`}
               >
-                <p className="text-center text-xl sm:text-2xl">
+                <p className="text-center text-lg md:text-2xl">
                   {project.title}
                 </p>
                 {isOpen && (
@@ -104,7 +96,8 @@ function ProjectSection() {
                       {project.techStack.map((tech, i) => (
                         <span
                           key={i}
-                          className="px-2 py-1 bg-zinc-800 rounded-full border border-zinc-700"
+                          className="px-2 py-1 bg-zinc-800 rounded-full border border-zinc-700 transition-all duration-300 ease-out
+                                     hover:-translate-y-2 hover:shadow-2xl hover:z-10"
                         >
                           {tech}
                         </span>
@@ -115,7 +108,8 @@ function ProjectSection() {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-400 underline"
+                        className="text-blue-400 p-2 rounded-2xl border-2 border-zinc-800 transition-all duration-300 ease-out
+            hover:-translate-y-2 hover:shadow-2xl hover:z-10 shadow-blue-400"
                       >
                         GitHub
                       </a>
@@ -123,7 +117,8 @@ function ProjectSection() {
                         href={project.liveDemo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-green-400 underline"
+                        className="p-2 rounded-2xl text-green-400 border-2 border-zinc-800 transition-all duration-300 ease-out
+            hover:-translate-y-2 hover:shadow-2xl hover:z-10 shadow-green-400"
                       >
                         Live Demo
                       </a>
@@ -131,6 +126,17 @@ function ProjectSection() {
                   </>
                 )}
               </div>
+              <button
+                className={`${
+                  isOpen
+                    ? "border-2 border-red-600 text-red-600 shadow-red-600"
+                    : "border-2 border-zinc-600 shadow-white"
+                } p-2 rounded-2xl cursor-pointer transition-all duration-300 ease-out
+            hover:-translate-y-2 hover:shadow-2xl hover:z-10`}
+                onClick={() => handleClick(index)}
+              >
+                {isOpen ? "Close" : "View Details"}
+              </button>
             </div>
           );
         })}

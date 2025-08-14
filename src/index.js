@@ -8,7 +8,6 @@ import reactLogo from "./assets/icons/react-js-icon.png";
 import reduxLogo from "./assets/icons/redux-icon.png";
 import mySqlLogo from "./assets/icons/mysql-icon.png";
 import gitLogo from "./assets/icons/git-icon.png";
-import githubLogo from "./assets/icons/github-icon.png";
 import dockerLogo from "./assets/icons/docker-icon.png";
 import postmanLogo from "./assets/icons/postman-icon.png";
 import profile from "./assets/icons/wired-outline-680-it-developer-hover-pinch.json";
@@ -16,6 +15,10 @@ import location from "./assets/icons/wired-outline-18-location-pin-hover-jump.js
 import computer from "./assets/icons/wired-outline-478-computer-display-hover-angle.json";
 import globe from "./assets/icons/wired-outline-27-globe-hover-rotate.json";
 import email from "./assets/icons/wired-outline-177-envelope-send-hover-flying.json";
+import x from "./assets/icons/x-icon.png";
+import linkedin from "./assets/icons/linkedin-icon.png";
+import fiverr from "./assets/icons/fiverr-icon.png";
+import githubWhite from "./assets/icons/github-white-icon.png";
 import project1 from "./assets/images/project1.png";
 export {
   htmlLogo,
@@ -28,7 +31,6 @@ export {
   reduxLogo,
   mySqlLogo,
   gitLogo,
-  githubLogo,
   dockerLogo,
   postmanLogo,
   profile,
@@ -36,5 +38,9 @@ export {
   computer,
   globe,
   email,
+  x,
+  linkedin,
+  fiverr,
+  githubWhite,
   project1,
 };

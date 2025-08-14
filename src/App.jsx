@@ -1,5 +1,5 @@
 import "./App.css";
-import background from "./assets/videos/Space_Background.mp4";
+import background from "./assets/videos/background.mp4";
 import Banner from "./Components/Banner";
 import Header from "./Components/Header";
 import HeroSection from "./Components/HeroSection";
@@ -12,6 +12,8 @@ import { useEffect, useRef } from "react";
 import SkillsSection from "./Components/SkillsSection";
 import About from "./Components/About";
 import ProjectSection from "./Components/ProjectSection";
+import SocialsAndContact from "./Components/SocialsAndContact";
+import Footer from "./Components/Footer";
 // Register GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
 
@@ -93,6 +95,8 @@ function App() {
         <About />
         <SkillsSection />
         <ProjectSection />
+        <SocialsAndContact />
+        <Footer />
       </div>
     </div>
   );
