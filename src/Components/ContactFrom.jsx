@@ -11,7 +11,6 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -23,8 +22,7 @@ function ContactForm() {
         setPopup({
           show: true,
           success: true,
-          message:
-            "Email sent successfully! I will reply soon. Thanks for reaching out!",
+          message: "Email sent successfully! I will reply soon. Thanks!",
         });
         formRef.current.reset();
       })
@@ -41,7 +39,7 @@ function ContactForm() {
     setPopup({ show: false, success: true, message: "" });
 
   return (
-    <div className="w-full font-sansations max-w-lg mx-auto p-6 sm:p-4 border-2 border-zinc-900 rounded-xl bg-zinc-950">
+    <div className="relative w-full font-sansations max-w-lg mx-auto p-6 sm:p-4 border-2 border-zinc-900 rounded-xl bg-zinc-950">
       <h2 className="font-googleSans text-2xl sm:text-xl font-bold mb-6 text-center">
         Send Me a Message
       </h2>
@@ -73,8 +71,7 @@ function ContactForm() {
         />
         <button
           type="submit"
-          className="w-full bg-gray-300 hover:bg-gray-200 text-black p-3 sm:p-2 rounded text-sm sm:text-base transition-all duration-300 ease-out
-            hover:-translate-y-2 hover:shadow-lg hover:z-10 hover:shadow-zinc-700"
+          className="w-full bg-gray-300 hover:bg-gray-200 text-black p-3 sm:p-2 rounded text-sm sm:text-base transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-lg hover:z-10 hover:shadow-zinc-700"
         >
           Send
         </button>
@@ -82,10 +79,13 @@ function ContactForm() {
 
       {popup.show && (
         <div
-          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 p-4"
+          className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 p-4"
           onClick={closePopup}
         >
-          <div className="bg-zinc-950 p-6 sm:p-4 rounded-xl text-center max-w-md w-full">
+          <div
+            className="bg-zinc-950 p-6 sm:p-4 rounded-xl text-center max-w-md w-full"
+            onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside popup
+          >
             <h3
               className={`text-lg font-bold mb-2 ${
                 popup.success ? "text-green-400" : "text-red-400"
@@ -96,7 +96,7 @@ function ContactForm() {
             <p className="text-white text-sm sm:text-base">{popup.message}</p>
             <button
               onClick={closePopup}
-              className="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-sm sm:text-base"
+              className="mt-4 w-full bg-gray-300 hover:bg-gray-200 text-black  px-4 py-2 rounded text-sm sm:text-base transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-lg hover:z-10 hover:shadow-zinc-700"
             >
               Close
             </button>
