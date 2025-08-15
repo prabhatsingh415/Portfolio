@@ -32,7 +32,7 @@ export default function Overview() {
     { icon: computer, text: "Computer Science Student" },
     { icon: location, text: "Kota, Rajasthan, INDIA" },
     { icon: globe, text: "www.myportfolio.com" },
-    { icon: email, text: "work.singh.prabhat@gmail.com" },
+    { icon: email, text: "singh.prabhat.work@gmail.com" },
   ];
 
   return (
