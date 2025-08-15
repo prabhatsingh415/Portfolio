@@ -8,7 +8,7 @@ const Icon = ({ animationData, playing }) => {
     animationData,
     loop: false,
     autoplay: false,
-    style: { width: "100%", height: "100%" }, // ensures Lottie fills container
+    style: { width: "100%", height: "100%" },
   });
 
   useEffect(() => {
@@ -31,7 +31,11 @@ export default function Overview() {
     { icon: profile, text: "Aspiring Software Engineer" },
     { icon: computer, text: "Computer Science Student" },
     { icon: location, text: "Kota, Rajasthan, INDIA" },
-    { icon: globe, text: "www.myportfolio.com" },
+    {
+      icon: globe,
+      text: "www.myportfolio.com",
+      link: "https://prabhatsingh-two.vercel.app/",
+    },
     { icon: email, text: "singh.prabhat.work@gmail.com" },
   ];
 
@@ -40,7 +44,7 @@ export default function Overview() {
       ref={sectionRef}
       className="h-auto w-full flex flex-col flex-wrap font-sansations bg-black border-2 border-zinc-900 rounded-xl p-6 sm:p-8 space-y-4 text-white"
     >
-      {items.map(({ icon, text }, i) => (
+      {items.map(({ icon, text, link }, i) => (
         <div
           key={i}
           className="w-full flex items-center gap-3 sm:gap-4"
@@ -48,9 +52,20 @@ export default function Overview() {
           onMouseLeave={() => setHoverIndex(null)}
         >
           <Icon animationData={icon} playing={hoverIndex === i} />
-          <span className="flex-1 text-xs sm:text-sm md:text-md break-words">
-            {text}
-          </span>
+          {link ? (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-xs sm:text-sm md:text-md break-words cursor-pointer"
+            >
+              {text}
+            </a>
+          ) : (
+            <span className="flex-1 text-xs sm:text-sm md:text-md break-words">
+              {text}
+            </span>
+          )}
         </div>
       ))}
     </div>
