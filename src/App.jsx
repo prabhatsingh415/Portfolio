@@ -14,6 +14,7 @@ import About from "./Components/About";
 import ProjectSection from "./Components/ProjectSection";
 import SocialsAndContact from "./Components/SocialsAndContact";
 import Footer from "./Components/Footer";
+import { Analytics } from "@vercel/analytics/next";
 // Register GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,35 +71,37 @@ function App() {
     });
   });
   return (
-    <div className="w-full min-h-screen flex items-center justify-center">
-      {/* Background video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        className="fixed top-0 left-0 w-full h-full object-cover z-0"
-      >
-        <source src={background} type="video/mp4" />
-      </video>
+    <Analytics>
+      <div className="w-full min-h-screen flex items-center justify-center">
+        {/* Background video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="fixed top-0 left-0 w-full h-full object-cover z-0"
+        >
+          <source src={background} type="video/mp4" />
+        </video>
 
-      {/* Foreground content */}
-      <div
-        ref={sectionRef}
-        className="relative z-10 flex flex-col gap-8 mt-4 w-80 md:w-1/2 bg-black text-white rounded-xl p-4"
-      >
-        <Header />
-        <Banner />
-        <HeroSection />
-        <Overview />
-        <About />
-        <SkillsSection />
-        <ProjectSection />
-        <SocialsAndContact />
-        <Footer />
+        {/* Foreground content */}
+        <div
+          ref={sectionRef}
+          className="relative z-10 flex flex-col gap-8 mt-4 w-80 md:w-1/2 bg-black text-white rounded-xl p-4"
+        >
+          <Header />
+          <Banner />
+          <HeroSection />
+          <Overview />
+          <About />
+          <SkillsSection />
+          <ProjectSection />
+          <SocialsAndContact />
+          <Footer />
+        </div>
       </div>
-    </div>
+    </Analytics>
   );
 }
 
