@@ -1,12 +1,49 @@
-# React + Vite
+# Prabhat Singh's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal developer portfolio! This project is designed to showcase my skills, experience, and projects, providing a snapshot of my professional journey in software development.
 
-Currently, two official plugins are available:
+## 🌟 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Visit my portfolio online: [prabhatsingh-two.vercel.app](https://prabhatsingh-two.vercel.app)
 
-## Expanding the ESLint configuration
+## 🚀 About The Project
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This portfolio is built using **React** and **Vite** for fast, modern web development. It features a clean, responsive design and highlights my work, skills, and accomplishments.
+
+## ✨ Features
+
+- Interactive home and about sections
+- Project gallery with details and links
+- Skills overview
+- Contact form for direct communication
+- Responsive, mobile-friendly design
+
+## 🛠️ Technologies Used
+
+- React
+- Vite
+- JavaScript
+- CSS/Styled Components
+
+## 📂 Getting Started
+
+To run this project locally:
+
+```bash
+git clone https://github.com/prabhatsingh415/Portfolio.git
+cd Portfolio
+npm install
+npm run dev
+```
+
+## 📋 Projects
+
+Explore my featured projects in the portfolio section, demonstrating my proficiency in frontend development, UI/UX design, and more.
+
+## 📫 Contact
+
+Feel free to connect! Use the contact form on the site or reach out via [GitHub](https://github.com/prabhatsingh415).
+
+---
+
+Thank you for visiting my portfolio. I hope you enjoy exploring my work!
