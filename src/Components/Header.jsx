@@ -9,7 +9,7 @@ function Header() {
       className="sticky top-0 w-full h-auto p-2 font-googleSans flex justify-around gap-8 border-2 bg-black border-zinc-900 rounded-xl z-50"
     >
       <a
-        href="/resume.pdf" // Make sure this file is in the public folder
+        href="/newResume.pdf" 
         download="Prabhat_Singh_Resume.pdf"
         className="transition-all duration-300 ease-out
     hover:-translate-y-2 hover:shadow-xl hover:z-10 hover:shadow-zinc-700"
